@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <style>
+    body {
+      margin: 0;
+    }
+  </style>
+  <script src="//unpkg.com/globe.gl"></script>
+</head>
+
+<body>
+  <div id="globeViz"></div>
+
+  <script>
+    fetch('new7wonders.json').then(res => res.json()).then(places => {
+      Globe()
+        .globeImageUrl('cloudyearth.jpeg')
+        .backgroundImageUrl('//unpkg.com/three-globe/example/img/night-sky.png')
+        .labelsData(places.features)
+        .labelLat(d => d.geometry.coordinates[1])
+        .labelLng(d => d.geometry.coordinates[0])
+        .labelText(d => d.properties.name)
+        .labelSize(() => 5)
+        .labelDotRadius(() => 5)
+        .labelColor(() => 'rgba(255, 165, 0, 0.75)')
+        .labelResolution(2)
+      (document.getElementById('globeViz'))
+    
+      .onLabelClick((label) => {
+        if (label.properties.name === 'Petra') {
+          alert("clicked on petra")
+        }
+      });
+    });
+  </script>
+
+</body>
+
+</html>
