@@ -56,18 +56,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Globe window
         (document.getElementById('globeViz'))
-        .height(window.innerHeight * 0.93)
+        .height(window.innerHeight * 0.90)
         .width(window.innerWidth * 0.70)
-
+        
         // Globe landmarks for clicking
-        .onLabelClick((label) => {
+        globe.onLabelClick((label) => {
           const landmarkName = label.properties.name;
-          if (['Petra', 'Colosseum', 'Taj Mahal', 'Christ the Redeemer', 'Machu Pichu', 'Great Wall of China', 'Chichen Itza'].includes(landmarkName)) {
-              handleLandmarkClick(landmarkName)(label);
-          }
-      })      
-    })
-    // Error catch
-    .catch(error => console.error('Error fetching data:', error))
+          
+          // Set background image dynamically based on landmarkName
+          globe.backgroundImageUrl(`img/${landmarkName.toLowerCase()}.jpg`);
+          
+          // Moving POV to landmark
+          handleLandmarkClick(landmarkName)(label);
+        });
+      })
+
+      // Error catch
+      .catch(error => console.error('Error fetching data:', error));
 });
 
