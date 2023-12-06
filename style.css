@@ -1,6 +1,15 @@
-
 .main_container {
+  height: 91vh;
+  margin: 20px;
+  margin-top: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
   display: flex;
+  border: solid 10px white;
+  border-radius: 10px;  /*Adjust the value to control the amount of rounding */
+  overflow: hidden; /* Ensure the rounded corners are applied */
+  background-image: url('img/night.jpg');
+  background-size: 100% 100%; /* Ensure the image covers the container */
 }
 
 .globe_section {
@@ -14,18 +23,18 @@
   color: white;
   font-family: 'Helvetica', sans-serif;
   overflow-y: auto;
-  max-height: 100vh;
+  max-height: 91vh;
 }
 
 #globeViz {
-  width: 100%;
-  height: 100%; 
+  width: 80%;
+  height: 80%; 
 }
 
 body {
-  margin: 0;
-  padding: 0;
   overflow-y: hidden;
+  overflow-x: hidden;
+  background-color: #121111;
 }
 
 h2 {
@@ -37,8 +46,8 @@ h1 {
   font-family: 'Helvetica', sans-serif; 
   margin-left: 20px;
   position: absolute;
-  top: 40px;
-  right: 410px;
+  top: 37px;
+  right: 450px;
   color: white;
   z-index: 1000;
   transform: rotate(-90deg);

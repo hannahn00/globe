@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
         globe.pointOfView({
           lat: coordinates(landmarkName).lat,
           lng: coordinates(landmarkName).lng,
-          altitude: 2.5
+          altitude: 2
         }, [1000]);
       }
     };
@@ -42,8 +42,8 @@ document.addEventListener("DOMContentLoaded", function () {
     
       // Fetching globe and labels appearance details
       globe = Globe()
-        .globeImageUrl('cloudyearth.jpeg')
-        .backgroundImageUrl('night.jpg')
+        .globeImageUrl('img/cloudyearth.jpeg')
+        .backgroundImageUrl('img/night.jpg')
         .labelsData(places.features)
         .labelLat(d => d.geometry.coordinates[1])
         .labelLng(d => d.geometry.coordinates[0])
@@ -56,8 +56,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Globe window
         (document.getElementById('globeViz'))
-        .height(window.innerHeight)
-        .width(window.innerWidth * 0.75)
+        .height(window.innerHeight * 0.93)
+        .width(window.innerWidth * 0.70)
 
         // Globe landmarks for clicking
         .onLabelClick((label) => {
