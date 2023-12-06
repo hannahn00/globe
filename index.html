@@ -1,41 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <style>
-    body {
-      margin: 0;
-    }
-  </style>
-  <script src="//unpkg.com/globe.gl"></script>
-</head>
+  <head>
+    <script src="//unpkg.com/globe.gl" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.0/gsap.min.js"></script>
+    <script src="script.js" defer></script>
+    <script src="https://kit.fontawesome.com/68f383374a.js" crossorigin="anonymous"></script>
+    <link href="style.css" rel="stylesheet">
+  </head>
 
-<body>
-  <div id="globeViz"></div>
+  <body>
+    <div class="main_container">
+      
+      <div class="globe_section">
+        <div id="globeViz"></div>
+        <h1>SEVEN WONDERS OF THE WORLD</h1>
 
-  <script>
-    fetch('new7wonders.json').then(res => res.json()).then(places => {
-      Globe()
-        .globeImageUrl('cloudyearth.jpeg')
-        .backgroundImageUrl('//unpkg.com/three-globe/example/img/night-sky.png')
-        .labelsData(places.features)
-        .labelLat(d => d.geometry.coordinates[1])
-        .labelLng(d => d.geometry.coordinates[0])
-        .labelText(d => d.properties.name)
-        .labelSize(() => 5)
-        .labelDotRadius(() => 5)
-        .labelColor(() => 'rgba(255, 165, 0, 0.75)')
-        .labelResolution(2)
-      (document.getElementById('globeViz'))
-    
-      .onLabelClick((label) => {
-        if (label.properties.name === 'Petra') {
-          alert("clicked on petra")
-        }
-      });
-    });
-  </script>
+      </div>
 
-</body>
+      <div class="info_section">
+
+        <div id="info">
+
+          <div id="Petra">
+            <h2>Petra</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </br>
+          </div>
+
+          <div id="Colosseum">
+            <h2>Colosseum</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </br>
+          </div>
+
+          <div id="Taj Mahal">
+            <h2>Taj Mahal</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </br>
+          </div>
+
+          <div id="Christ the Redeemer">
+            <h2>Christ the Redeemer</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </br>
+          </div>
+
+          <div id="Machu Pichu">
+            <h2>Machu Pichu</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </br>
+          </div>
+
+          <div id="Great Wall of China">
+            <h2>Great Wall of China</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </br>
+          </div>
+
+          <div id="Chichen Itza">
+            <h2>Chichen Itza</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </br>
+          </br>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </body>
 
 </html>
