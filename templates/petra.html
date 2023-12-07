@@ -1,87 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Petra</title>
-</head>
-<style>
-  #trivia {
-    font-family: 'Helvetica', sans-serif; 
-  }
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Petra</title>
+    </head>
+    <style>
+        body {
+            font-family: 'Helvetica', sans-serif;
+        }
 
-  input, label, h8 {
-    color: white;
-  }
+        input,
+        label,
+        h8 {
+            color: white;
+        }
 
-  p {
-    color: rgba(100, 240, 21, 1); 
-  }
+        p {
+            color: rgba(100, 240, 21, 1);
+        }
 
-  #submit {
-    margin-top: 20px;
-  }
+        #submit {
+            margin-top: 20px;
+        }
 
-  #change_button {
-    background-color: rgb(67, 160, 13);
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-    border-radius: 5px;
-  }
+        #change_button {
+            background-color: rgb(67, 160, 13);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
 
-  #change_button:hover {
-    background-color: #1b1a1a;
-  }
+        #change_button:hover {
+            background-color: #1b1a1a;
+        }
+    </style>
 
-</style>
+    <body>
+        <!--2 questions-->
+        <div id="trivia">
+            <h8>Petra, nestled in the rugged landscapes of Jordan, stands as a captivating testament to ancient civilizations. Renowned as an ancient City in Jordan and a bustling trading center, Petra's rose-red facades and intricate rock-cut architecture unfold a rich history. Carved into the rose-red cliffs around 2300 years ago, this archaeological marvel served as a key hub for trade routes, flourishing as a center of commerce and culture. As you wander through the narrow siq, marvel at the Treasury, and explore the archaeological wonders, Petra unveils the stories of a bygone era, preserving the legacy of an extraordinary city etched in time.</h8>
+            <form>
+                <p> 1. What is Petra? </p>
+                <input id="1a" type="radio">
+                <label id="right1" for="1a">Ancient city in Jordan</label>
+                <br>
+                <input id="1b" type="radio">
+                <label id="right2" for="1b">Trading center</label>
+                <br>
+                <input id="1c" type="radio">
+                <label id="right3" for="1c">All of the above</label>
+            </form>
 
-<body>
-  <div id="trivia">
-    <h8>Petra, nestled in the rugged landscapes of Jordan, stands as a captivating testament to ancient civilizations. Renowned as an ancient City in Jordan and a bustling trading center, Petra's rose-red facades and intricate rock-cut architecture unfold a rich history. Carved into the rose-red cliffs around 2300 years ago, this archaeological marvel served as a key hub for trade routes, flourishing as a center of commerce and culture. As you wander through the narrow siq, marvel at the Treasury, and explore the archaeological wonders, Petra unveils the stories of a bygone era, preserving the legacy of an extraordinary city etched in time.</h8>
-    <form>
-      <p> 1. What is Petra? </p>
-      <input id="1a" type="radio">
-      <label id="right1" for="1a">Ancient city in Jordan</label>
-      <br>
-      <input id="1b" type="radio">
-      <label id="right2" for="1b">Trading center</label>
-      <br>
-      <input id="1c" type="radio">
-      <label id="right3" for="1c">All of the above</label>
-    </form>
+            <p> 2. How old is Petra? </p>
+            <form>
+                <input id="2a" type="radio">
+                <label id="wrongA2" for="2a">870 years old</label>
+                <br>
+                <input id="2b" type="radio">
+                <label id="right4" for="2b">2300 years old</label>
+                <br>
+                <input id="2c" type="radio">
+                <label id="wrongB2" for="2c">1050 years old</label>
+            </form>
+        </div>
 
-    <p> 2. How old is Petra? </p>
-    <form>
-      <input id="2a" type="radio">
-      <label id="wrongA2" for="2a">870 years old</label>
-      <br>
-      <input id="2b" type="radio">
-      <label id="right4" for="2b">2300 years old</label>
-      <br>
-      <input id="2c" type="radio">
-      <label id="wrongB2" for="2c">1050 years old</label>
-    </form>
-  </div>
+        <!--Submission button-->
+        <div id="submit">
+            <input id="change_button" type="button" value="Submit answers!" onClick="change();" />
+        </div>
 
-  <div id="submit">
-    <input id="change_button" type="button" value="Submit answers!" onClick="change();" />
-  </div>
+        <script>
+            // Checking answers
+            function change() {
+                document.getElementById("right1").style.color = "green";
+                document.getElementById("right2").style.color = "green";
+                document.getElementById("right3").style.color = "green";
 
-  <script>
-    function change() {
-      document.getElementById("right1").style.color = "green";
-      document.getElementById("right2").style.color = "green";
-      document.getElementById("right3").style.color = "green";
-
-      document.getElementById("wrongA2").style.color = "red";
-      document.getElementById("wrongB2").style.color = "red";
-      document.getElementById("right4").style.color = "green";
-    }
-  </script>
-</body>
+                document.getElementById("wrongA2").style.color = "red";
+                document.getElementById("wrongB2").style.color = "red";
+                document.getElementById("right4").style.color = "green";
+            }
+        </script>
+    </body>
 
 </html>

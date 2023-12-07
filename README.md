@@ -1,0 +1,7 @@
+Youtube URL: https://youtu.be/-R4mmqARK9Y?feature=shared
+
+You will need to download everything to load it (there's a folder called templates with all of the iframes and inside there is a folder with all of the images). In the actual folder is the json, script.js, style.css, and index.html. Opening index.html will bring you to the home page. Wait around 3 seconds for everything to be loaded up. There will be the globe section on the left and the landmark information on the right. There should be no scrollability to ensure usage of globe.
+
+In the globe space, you can drag it around and spin to each landmark dot. When one is pressed, the globe will spin so that dot is center and the iframes will be activated (no longer hidden). There'll also be a corresponding image in the background for each landmark where you can spin the globe around and view it in a 360 manner as if you were actually there.
+
+The corresponding information for the 7 wonders of the world will show up in the info section. It'd be either text, images, video, or trivia. You can move onto another location by dragging to another/pressing on another dot. If you press the "HOME" text top corner, you can reset the site back to this page.

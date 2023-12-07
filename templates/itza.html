@@ -2,65 +2,66 @@
 
 <html lang="en">
 
-<head>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
-    <link href="styles.css" rel="stylesheet">
-    <title>Trivia!</title>
-</head>
-<style>
-    body {
-      font-family: 'Helvetica', sans-serif;
-      color: rgba(100, 240, 21, 1);
-    }
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+    </head>
+    <style>
+        body {
+            font-family: 'Helvetica', sans-serif;
+            color: rgba(100, 240, 21, 1);
+        }
 
-    h3 {
-      color: rgba(100, 240, 21, 1);
-    }
+        h3 {
+            color: rgba(100, 240, 21, 1);
+        }
 
-    button {
-      margin-top: 20px;
-      background-color: rgb(67, 160, 13);
-      color: white;
-      padding: 5px 10px;
-      border: none;
-      cursor: pointer;
-      font-size: 16px;
-      border-radius: 5px;
-    }
+        button {
+            margin-top: 20px;
+            background-color: rgb(67, 160, 13);
+            color: white;
+            padding: 5px 10px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
 
-    button:hover {
-      background-color: #1b1a1a;
-    }
+        button:hover {
+            background-color: #1b1a1a;
+        }
 
-    p {
-      color: white;
-    }
+        p {
+            color: white;
+        }
+    </style>
 
-  </style>
 
-
-<body>
-    <div class="header">
-        <p>Chichen Itza, located on the Yucatan Peninsula in Mexico, is a renowned archaeological site representing the ancient Maya civilization's architectural prowess and astronomical achievements. This UNESCO World Heritage site is famous for its impressive pyramid, El Castillo, which served both as a temple and a calendar. The site also features a massive ball court, sacrificial cenotes, and intricate carvings, showcasing the Maya's advanced understanding of mathematics and celestial events.
-        </p>
-    </div>
-
-    <div class="container">
-        <div class="section">
-            <h3>What is the name of the iconic pyramid at Chichen Itza?</h3>
-            <input type="text" id="check" />
-            <button onclick="checkAnswer()">Check your answer</button>
-            <p id="feedbackFREE"></p>
+    <body>
+        <div class="header">
+            <!--Text blurb-->
+            <p>Chichen Itza, located on the Yucatan Peninsula in Mexico, is a renowned archaeological site representing the ancient Maya civilization's architectural prowess and astronomical achievements. This UNESCO World Heritage site is famous for its impressive pyramid, El Castillo, which served both as a temple and a calendar. The site also features a massive ball court, sacrificial cenotes, and intricate carvings, showcasing the Maya's advanced understanding of mathematics and celestial events.
+            </p>
         </div>
-    </div>
-</body>
+
+        <div class="container">
+            <div class="section">
+                <!--Free response-->
+                <h3>What is the name of the iconic pyramid at Chichen Itza?</h3>
+                <input type="text" id="check" />
+                <button onclick="checkAnswer()">Check your answer</button>
+                <p id="feedbackFREE"></p>
+            </div>
+        </div>
+    </body>
 
     <script>
-        //load DOM
-        document.addEventListener('DOMContentLoaded', function () {
+        // Load DOM first
+        document.addEventListener('DOMContentLoaded', function() {
             document.querySelector('button').addEventListener('click', checkAnswer);
         });
-        //check answers
+        // Checking answers and giving feedback, correct green, incorrect red
         function checkAnswer() {
             let input = document.querySelector('#check').value.toLowerCase(); // Convert input to lowercase for case-insensitive comparison
             if (input === 'el castillo') {

@@ -1,81 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-    <script src="//unpkg.com/globe.gl" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.0/gsap.min.js"></script>
-    <script src="script.js" defer></script>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400&display=swap">
+    <head>
+        <script src="//unpkg.com/globe.gl" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.0/gsap.min.js"></script>
+        <script src="script.js" defer></script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400&display=swap">
 
-    <link href="style.css" rel="stylesheet">
-  </head>
+        <link href="style.css" rel="stylesheet">
+    </head>
 
-  <body>
-    <div class="main_container">
-      <div id="loader">text</div>
-      
-      <div class="globe_section">
-        <div id="globeViz"></div>
-        <h1>SEVEN WONDERS OF THE WORLD</h1>
-        <h8>Click on each dot to see the 7 wonders of the world! You can drag your mouse around to view that location.</h8>
-        <a href="index.html"><h4>HOME</h4></a>
-      </div>
+    <body>
+        <div class="main_container">
 
-      <div class="info_section">
+            <!--Globe section-->
+            <div class="globe_section">
+                <div id="globeViz"></div>
+                <h1>SEVEN WONDERS OF THE WORLD</h1>
+                <h8>Click on each dot to see the 7 wonders of the world! You can drag your mouse around to view that location.</h8>
+                <a href="index.html">
+                    <h4>HOME</h4>
+                </a>
+            </div>
+            
+            <!--Info section-->
+            <div class="info_section">
 
-        <div id="info">
+                <!--All landmarks-->
+                <div id="info">
 
-          <div id="Petra">
-          </br>
-            <h2>PETRA</h2>
-            <iframe id="Petra_iframe" src="templates/petra.html" frameborder="0" width="100%" height="1000px" style="overflow-y: hidden;"></iframe>
-          </div>
-  
-          <div id="Colosseum">
-          </br>
-            <h2>COLOSSEUM</h2>
-            <iframe id="Colosseum_iframe" src="templates/colosseum.html" frameborder="0" width="100%" height="1000px" style="overflow-y: hidden;"></iframe>
-          </div>
+                    <div id="Petra">
+                        </br>
+                        <h2>PETRA</h2>
+                        <iframe id="Petra_iframe" src="templates/petra.html" frameborder="0" width="100%" height="1000px" style="overflow-y: hidden;"></iframe>
+                    </div>
 
-          <div id="Taj Mahal">
-          </br>
-            <h2>TAJ MAHAL</h2>
-            <iframe id="Taj Mahal_iframe" src="templates/tajmahal.html" frameborder="0" width="100%" height="1000px" style="overflow-y: hidden;"></iframe>
-          </div>
+                    <div id="Colosseum">
+                        </br>
+                        <h2>COLOSSEUM</h2>
+                        <iframe id="Colosseum_iframe" src="templates/colosseum.html" frameborder="0" width="100%" height="1000px" style="overflow-y: hidden;"></iframe>
+                    </div>
 
-          <div id="Christ the Redeemer">
-          </br>
-            <h2>CHRIST THE REDEEMER</h2>
-            <iframe id="Christ the Redeemer_iframe" src="templates/christ.html" frameborder="0" width="100%" height="1000px" style="overflow-y: hidden;"></iframe>
-          </div>
+                    <div id="Taj Mahal">
+                        </br>
+                        <h2>TAJ MAHAL</h2>
+                        <iframe id="Taj Mahal_iframe" src="templates/tajmahal.html" frameborder="0" width="100%" height="1000px" style="overflow-y: hidden;"></iframe>
+                    </div>
 
-          <div id="Machu Pichu">
-          </br>
-            <h2>MACHU PICHU</h2>
-            <iframe id="Machu Pichu_iframe" src="templates/machu.html" frameborder="0" width="100%" height="1000px" style="overflow-y: hidden;"></iframe>
-          </div>
+                    <div id="Christ the Redeemer">
+                        </br>
+                        <h2>CHRIST THE REDEEMER</h2>
+                        <iframe id="Christ the Redeemer_iframe" src="templates/christ.html" frameborder="0" width="100%" height="1000px" style="overflow-y: hidden;"></iframe>
+                    </div>
 
-          <div id="Great Wall of China">
-          </br>
-            <h2>GREAT WALL OF CHINA</h2>
-            <iframe id="Great Wall of China_iframe" src="templates/china.html" frameborder="0" width="100%" height="1000px" style="overflow-y: auto;"></iframe>
-          </div>
+                    <div id="Machu Pichu">
+                        </br>
+                        <h2>MACHU PICHU</h2>
+                        <iframe id="Machu Pichu_iframe" src="templates/machu.html" frameborder="0" width="100%" height="1000px" style="overflow-y: hidden;"></iframe>
+                    </div>
 
-          <div id="Chichen Itza">
-          </br>
-            <h2>CHICHEN ITZA</h2>
-            <iframe id="Chichen Itza_iframe" src="templates/itza.html" frameborder="0" width="100%" height="1000px" style="overflow-y: hidden;"></iframe>
-          </br></br></br></br>
+                    <div id="Great Wall of China">
+                        </br>
+                        <h2>GREAT WALL OF CHINA</h2>
+                        <iframe id="Great Wall of China_iframe" src="templates/china.html" frameborder="0" width="100%" height="1000px" style="overflow-y: auto;"></iframe>
+                    </div>
 
-
-          </div>
-
+                    <div id="Chichen Itza">
+                        </br>
+                        <h2>CHICHEN ITZA</h2>
+                        <iframe id="Chichen Itza_iframe" src="templates/itza.html" frameborder="0" width="100%" height="1000px" style="overflow-y: hidden;"></iframe>
+                        </br></br></br></br>
+                    </div>
+                </div>
+            </div>
         </div>
-
-      </div>
-
-    </div>
-  </body>
-
-
+    </body>
 </html>
