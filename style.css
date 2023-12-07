@@ -5,8 +5,6 @@
   border: solid 5px white;
   border-radius: 10px;  /* Adjust the value to control the amount of rounding */
   overflow: hidden; /* Ensure the rounded corners are applied */
-  background-image: url('img/night.jpg');
-  background-size: 100% 100%; /* Ensure the image covers the container */
 }
 
 .globe_section {
@@ -15,17 +13,18 @@
 
 .info_section {
   flex: 40%;
-  background-color: #1b1a1a;
+  background-color: #060606;
   padding: 2%;
   color: white;
   font-family: 'Helvetica', sans-serif;
-  overflow-y: auto;
+  overflow-y: hidden;
   max-height: 91vh;
 }
 
 #globeViz {
   width: 100%;
   height: 100%; 
+  margin-left: -40px;
 }
 
 body {
@@ -37,9 +36,11 @@ body {
 
 h2 {
   color: rgba(100, 240, 21, 1); 
+  font-family: 'Roboto Mono';
+  font-size: 150%;
 }
 
-h1, h8 {
+h1, h8, h4 {
   font-family: 'Helvetica', sans-serif; 
   margin-left: 2%;
   position: absolute;
@@ -59,4 +60,10 @@ h8 {
   bottom: 7%;
   right: 30.5%;
   font-size: 125%;
+}
+
+h4 {
+  bottom: 615px;
+  left: 2%;
+  font-size: 300%;
 }

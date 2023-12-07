@@ -5,18 +5,20 @@
     <script src="//unpkg.com/globe.gl" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.0/gsap.min.js"></script>
     <script src="script.js" defer></script>
-    <script src="https://kit.fontawesome.com/68f383374a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400&display=swap">
+
     <link href="style.css" rel="stylesheet">
   </head>
 
   <body>
     <div class="main_container">
+      <div id="loader">text</div>
       
       <div class="globe_section">
         <div id="globeViz"></div>
         <h1>SEVEN WONDERS OF THE WORLD</h1>
         <h8>Click on each dot to see the 7 wonders of the world! You can drag your mouse around to view that location.</h8>
-
+        <a href="index.html"><h4>HOME</h4></a>
       </div>
 
       <div class="info_section">
@@ -24,45 +26,48 @@
         <div id="info">
 
           <div id="Petra">
-            <h2>Petra</h2>
-            <iframe src="templates/petra.html" frameborder="0" width="100%" height="100%"></iframe>
+          </br>
+            <h2>PETRA</h2>
+            <iframe id="Petra_iframe" src="templates/petra.html" frameborder="0" width="100%" height="1000px" style="overflow-y: hidden;"></iframe>
           </div>
   
           <div id="Colosseum">
-            <h2>Colosseum</h2>
-            <iframe src="templates/colosseum.html" frameborder="0" width="100%" height="100%"></iframe>
           </br>
+            <h2>COLOSSEUM</h2>
+            <iframe id="Colosseum_iframe" src="templates/colosseum.html" frameborder="0" width="100%" height="1000px" style="overflow-y: hidden;"></iframe>
           </div>
 
           <div id="Taj Mahal">
-            <h2>Taj Mahal</h2>
-            <iframe src="templates/tajmahal.html" frameborder="0" width="100%" height="100%"></iframe>
           </br>
+            <h2>TAJ MAHAL</h2>
+            <iframe id="Taj Mahal_iframe" src="templates/tajmahal.html" frameborder="0" width="100%" height="1000px" style="overflow-y: hidden;"></iframe>
           </div>
 
           <div id="Christ the Redeemer">
-            <h2>Christ the Redeemer</h2>
-            <iframe src="templates/christ.html" frameborder="0" width="100%" height="100%"></iframe>
           </br>
+            <h2>CHRIST THE REDEEMER</h2>
+            <iframe id="Christ the Redeemer_iframe" src="templates/christ.html" frameborder="0" width="100%" height="1000px" style="overflow-y: hidden;"></iframe>
           </div>
 
           <div id="Machu Pichu">
-            <h2>Machu Pichu</h2>
-            <iframe src="templates/machu.html" frameborder="0" width="100%" height="100%"></iframe>
           </br>
+            <h2>MACHU PICHU</h2>
+            <iframe id="Machu Pichu_iframe" src="templates/machu.html" frameborder="0" width="100%" height="1000px" style="overflow-y: hidden;"></iframe>
           </div>
 
           <div id="Great Wall of China">
-            <h2>Great Wall of China</h2>
-            <iframe src="templates/china.html" frameborder="0" width="100%" height="100%"></iframe>
           </br>
+            <h2>GREAT WALL OF CHINA</h2>
+            <iframe id="Great Wall of China_iframe" src="templates/china.html" frameborder="0" width="100%" height="1000px" style="overflow-y: auto;"></iframe>
           </div>
 
           <div id="Chichen Itza">
-            <h2>Chichen Itza</h2>
-            <iframe src="templates/itza.html" frameborder="0" width="100%" height="100%"></iframe>
           </br>
-          </br>
+            <h2>CHICHEN ITZA</h2>
+            <iframe id="Chichen Itza_iframe" src="templates/itza.html" frameborder="0" width="100%" height="1000px" style="overflow-y: hidden;"></iframe>
+          </br></br></br></br>
+
+
           </div>
 
         </div>
@@ -71,7 +76,6 @@
 
     </div>
   </body>
-  
 
 
 </html>
